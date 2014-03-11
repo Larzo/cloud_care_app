@@ -24,7 +24,7 @@
         <td><%= appointment.comments %></td>
         <td><%= link_to 'Show', appointment %></td>
         <td><%= link_to 'Edit', edit_appointment_path(appointment) %></td>
-        <td><%= link_to 'Destroy', appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', "/appointments/destroy/#{appointment.id}", method: :post %></td>
       </tr>
     <% end %>
   </tbody>
